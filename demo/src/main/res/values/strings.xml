@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SerialCSV</string>
+    <string name="heading">Check the code for csv data</string>
+    <string name="message">Success/Failure message after export</string>
+    <string name="export">Export</string>
+</resources>
