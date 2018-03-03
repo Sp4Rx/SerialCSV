@@ -1,6 +1,8 @@
 package io.github.sp4rx.serialcsvlibarary;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -71,6 +73,7 @@ public class SerialCSV<T> {
      * @return {{@link SerialCSV}}
      */
     public SerialCSV<T> setHeading(String... headings) {
+        Arrays.sort(headings, String.CASE_INSENSITIVE_ORDER);
         this.headings = headings;
         return this;
     }
@@ -82,6 +85,7 @@ public class SerialCSV<T> {
      * @return {{@link SerialCSV}}
      */
     public SerialCSV<T> setHeading(List<String> headings) {
+        Collections.sort(headings, String.CASE_INSENSITIVE_ORDER);
         this.headings = headings.toArray(new String[0]);
         return this;
     }
